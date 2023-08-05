@@ -1,8 +1,9 @@
 # TaazaKhabr News Portal
 
-![TaazaKhabr Logo](logo.png)
+![TaazaKhabr Logo](logo.png)  https://monojmkd.github.io/taazakhabr-news/
 
-https://monojmkd.github.io/taazakhabr-news/
+
+
 TaazaKhabr is a news website portal that provides users with the latest and most up-to-date news and information from around the world. This repository contains the source code and assets for the TaazaKhabr website.
 
 ## Features
