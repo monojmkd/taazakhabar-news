@@ -52,8 +52,6 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## Acknowledgments
 
-- Thanks to all the contributors who have helped make TaazaKhabr better!
-
 - Logo designed by myself using Canva.
 
 ---
