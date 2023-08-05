@@ -2,25 +2,41 @@ import React, { Component } from "react";
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsURL } =
+    let { title, description, imageUrl, newsURL, author, date, source } =
       this.props;
-    // let defUrlImg =
-    //   "https://static1.anpoimages.com/wordpress/wp-content/uploads/2023/04/google-io-2023.jpeg";
+    let defUrlImg =
+      "https://static1.anpoimages.com/wordpress/wp-content/uploads/2023/04/google-io-2023.jpeg";
     return (
-      <div className="card mb-3" style={{maxWidth: "100%"}}>
-       <div class="row g-0">
-    <div class="col-md-4">
-    <img src={imageUrl} class="card-img-top" alt="..." />
+      <div className="card mb-2" style={{maxWidth: "100%"}}  >
+       <div className="row g-1" style={{backgroundColor:"#EDEDED"}} >
+       <div style={ {display:'flex', justifyContent:'flex-start',position:'absolute',left:10}}>
+        <span
+        className="badge rounded-pill bg-danger fs-6">
+        {source}
+      </span>
+        </div>
+    <div className="col-md-4 my-1" style={{display:"flex", justifyContent:"center"}}  >   
+    <img src= {imageUrl ? imageUrl : defUrlImg} style={{ width:"21em", height:"15em"}} className="card-img-top" alt="..." />
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{title}</h5>
-        <p class="card-text">{description}...</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        <a variant="primary" href={newsURL} target="_blank"  rel="noreferrer" >
-            Read More
-          </a>
+    <div className="col-md-8">
+      <div className="card-body" >
+        <h5 className="card-title fw-bold" style={{fontFamily: " 'Lora', serif"}}>{title}</h5>
+        <p className="card-text">{description}...</p>
+        <a
+              href={newsURL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-sm btn-dark"
+            >
+              Read More
+            </a>
       </div>
+      <div className="card-footer mt-5" >
+            <small className="text-secondary"> {/* text-body-secondary */}
+              By {author ? author : "Unknown"} on {new Date(date).toGMTString()}
+            </small>
+           
+            </div>
     </div>
       </div>
       </div>

@@ -6,10 +6,7 @@ export default class NavBar extends Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
-              Navbar
-            </a>
-            <button
+           <button
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -23,9 +20,9 @@ export default class NavBar extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  {/* <a className="nav-link active" aria-current="page" href="/">
                     Home
-                  </a>
+                  </a> */}
                 </li>
                 </ul>
               <form className="d-flex">
