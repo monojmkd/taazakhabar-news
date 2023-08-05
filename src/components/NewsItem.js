@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsURL, author, date, source } =
+    let { title, description, imageUrl, newsURL } =
       this.props;
-    let defUrlImg =
-      "https://static1.anpoimages.com/wordpress/wp-content/uploads/2023/04/google-io-2023.jpeg";
+    // let defUrlImg =
+    //   "https://static1.anpoimages.com/wordpress/wp-content/uploads/2023/04/google-io-2023.jpeg";
     return (
       <div className="card mb-3" style={{maxWidth: "100%"}}>
        <div class="row g-0">

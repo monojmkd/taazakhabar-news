@@ -14,7 +14,7 @@ export default class News extends Component {
 
   async componentDidMount() {
    // let url = `https://newsdata.io/api/1/news?apikey=pub_27203c39257b95509c4a5ceb0c7c4f5c6006c&country=us`;
-    let url = `https://inshorts.me/news/all?offset=0&limit=50`
+    let url = `https://inshorts.me/news/all?limit=50`
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData.data);
