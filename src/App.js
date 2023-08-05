@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar.js';
 import News from './components/News';
 import BrandLogo from './components/BrandLogo';
-import { Route,BrowserRouter,Routes } from "react-router-dom";
+import { Route,HashRouter,Routes } from "react-router-dom";
 import Categories from './components/Categories';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
  <>
     <BrandLogo/>
    <NavBar/>
-   <BrowserRouter>   
+   <HashRouter>   
    <Categories />
    <Routes>
    <Route exact path="/" element={<News key = "National" category={"national"} />} />
@@ -26,7 +26,7 @@ function App() {
    </Routes>
   
    
-   </BrowserRouter>
+   </HashRouter>
    </>
   );
 }
