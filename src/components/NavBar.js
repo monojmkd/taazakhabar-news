@@ -3,39 +3,13 @@ import React, { Component } from "react";
 export default class NavBar extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container-fluid">
-           <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  {/* <a className="nav-link active" aria-current="page" href="/">
-                    Home
-                  </a> */}
-                </li>
-                </ul>
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
+      <div >
+        <nav className="navbar navbar-expand-lg center navbar-light bg-light" >
+          <div className="container-fluid" >
+           <div className="collapse navbar-collapse" style={{display:"flex",justifyContent:"center"}} id="navbarSupportedContent" >          
+              <a style={{color:"black"}} href="https://github.com/monojmkd/taazakhabar-news"><i className="bi mx-3 fs-4 bi-github"></i></a>               
+              <a style={{color:"black"}} href="https://www.facebook.com/monoj.mkd09"><i className="bi mx-3 fs-4 bi-facebook"></i></a> 
+              <a style={{color:"black"}} href="https://www.linkedin.com/in/monoj-kumar-das-019340a9"><i className="bi mx-3 fs-4 bi-linkedin"></i></a> 
             </div>
           </div>
         </nav>
