@@ -11,14 +11,18 @@ const News = (props) => {
   };
   const updateNews = async () => {
     props.setProgress(10);
-    const url = `https://inshorts.me/news/topics/${props.category}`;
+    // const url = `https://inshorts.me/news/topics/${props.category}`;
+    // const url = `https://taazakhabr-cors.vercel.app/proxy/inshorts/api/en/search/trending_topics/${props.category}?page=1&type=NEWS_CATEGORY`;
+    const url = `https://inshortsapi.vercel.app/news?category=${props.category}`;
     setLoading(true);
     let data = await fetch(url);
     props.setProgress(30);
     let parsedData = await data.json();
-    console.log(parsedData.data);
+    // console.log("data", parsedData.data);
     props.setProgress(70);
-    setArticles(parsedData.data.articles);
+    const newsData = parsedData.data;
+    console.log(newsData);
+    setArticles(newsData);
     setLoading(false);
     props.setProgress(100);
   };
@@ -37,21 +41,20 @@ const News = (props) => {
           textDecoration: "underline",
         }}
       >
-        Fresh News at Your Fingertips :{" "}
-        {capitalizeFirstLetter(props.category)}{" "}
+        Fresh News at Your Fingertips : {capitalizeFirstLetter(props.category)}{" "}
       </h2>
-      {loading && <Spinner />} 
+      {loading && <Spinner />}
       {articles.map((element) => {
         return (
-          <div key={element.hashId}>
+          <div key={element.id}>
             <NewsItem
               title={element.title ? element.title.slice(0, 100) : ""}
               description={element.content ? element.content.slice(0, 170) : ""}
               imageUrl={element.imageUrl}
-              newsURL={element.sourceUrl}
-              author={element.authorName}
-              date={element.createdAt}
-              source={element.sourceName}
+              newsURL={element.readMoreUrl}
+              author={element.author}
+              date={element.date}
+              // source={element.url}
             />
           </div>
         );
