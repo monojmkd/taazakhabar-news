@@ -1,0 +1,19 @@
+/* Categories.css */
+.container {
+  padding: 5px;
+}
+
+.btn {
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    margin: 1px;
+    font-size: 14px;
+    width: 26%;
+  }
+}

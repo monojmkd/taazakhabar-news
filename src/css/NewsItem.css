@@ -1,0 +1,40 @@
+/* NewsItem.css */
+
+.news-card {
+  max-width: 100%;
+}
+
+.news-card .row {
+  background-color: #ededed;
+}
+
+.card .badge {
+  display: none;
+  justify-content: flex-start;
+  position: absolute;
+  left: 10px;
+  font-size: 16px;
+}
+
+.card-img {
+  width: 90%;
+  height: 15em;
+}
+
+@media (max-width: 1080px) {
+  .card-img {
+    width: 100%;
+    height: 85%;
+  }
+}
+@media (max-width: 512px) {
+  .card-img {
+    width: 100%;
+    height: 95%;
+  }
+}
+
+.card-title {
+  font-family: "Lora", serif;
+  text-decoration: underline;
+}

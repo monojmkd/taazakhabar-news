@@ -1,0 +1,14 @@
+/* News.css */
+.container h2 {
+  font-family: "Dai Banna SIL", serif;
+  text-decoration: underline;
+}
+
+.card-footer {
+  margin-top: 20px;
+}
+
+.news {
+  display: flex;
+  justify-content: center;
+}

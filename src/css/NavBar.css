@@ -1,0 +1,18 @@
+/* NavBar.css */
+.navbar {
+  background-color: #f8f9fa;
+}
+
+.navbar .navbar-collapse {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .navbar-collapse a {
+  color: black;
+}
+
+.navbar .navbar-collapse a i {
+  margin: 0 15px;
+  font-size: 24px;
+}
